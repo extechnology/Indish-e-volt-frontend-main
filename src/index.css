@@ -1,0 +1,184 @@
+﻿@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: 'Geist Variable', sans-serif;
+    --font-sans: 'Geist Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+
+    /* Electric EV Theme Colors matched to Indish-e-Volt logo */
+    --color-electric-lime: #00D66C;
+    --color-electric-lime-hover: #00C060;
+    --color-electric-dark: #0A192F;
+    --color-electric-slate: #1E293B;
+    --color-electric-mint: #E6F9EE;
+    --color-electric-teal: #059669;
+}
+
+:root {
+    --background: #FAFCFA;
+    --foreground: #0A192F;
+    --card: #FFFFFF;
+    --card-foreground: #0A192F;
+    --popover: #FFFFFF;
+    --popover-foreground: #0A192F;
+    --primary: #00D66C;
+    --primary-foreground: #0A192F;
+    --secondary: #F0F9F3;
+    --secondary-foreground: #0A192F;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --accent: #D4F7E2;
+    --accent-foreground: #0A192F;
+    --destructive: #EF4444;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #00D66C;
+    --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  body {
+    @apply bg-[#FAFCFA] text-[#0F172A] selection:bg-[#00D66C] selection:text-black overflow-x-hidden antialiased;
+  }
+}
+
+/* Custom Lenis Smooth Scroll Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Glassmorphism & Neon Glow Utilities */
+.glass-header {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-lime {
+  box-shadow: 0 0 25px rgba(0, 214, 108, 0.45);
+}
+
+.glow-lime-lg {
+  box-shadow: 0 0 45px rgba(0, 214, 108, 0.6);
+}
+
+.text-stroke-lime {
+  -webkit-text-stroke: 1.5px #00D66C;
+  color: transparent;
+}
+
+/* Hide scrollbar for clean horizontal mobile swiping */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* â”€â”€â”€ Global Themed Scrollbar â”€â”€â”€ */
+/* Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0d14;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2a3a;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e4050;
+}
+::-webkit-scrollbar-corner {
+  background: #0a0d14;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e2a3a #0a0d14;
+}
