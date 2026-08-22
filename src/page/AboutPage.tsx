@@ -85,11 +85,11 @@ const ourSolution = [
 ]
 
 const timelineSteps = [
-  { year: '1997', title: 'Group Founder', desc: 'Indish World Group established, building trusted businesses across multiple sectors.' },
-  { year: '2026', title: 'Indish eVolt Launch', desc: 'Launch of our dedicated green-energy subsidiary to tackle India’s EV charging gap.' },
-  { year: '2027–2028', title: 'Expansion', desc: 'Phase 1 rollout and nationwide expansion across strategic highways and metros.' },
-  { year: '2029', title: 'Scale', desc: 'Scaling the network with advanced battery tech and renewable energy integration.' },
-  { year: '2030', title: 'IPO Horizon', desc: 'Targeting an Initial Public Offering, becoming a leading public green energy enterprise.' },
+  { year: '1997', title: 'Group Founder', desc: 'Indish World Group established, building trusted businesses across multiple sectors.', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80' },
+  { year: '2026', title: 'Indish eVolt Launch', desc: 'Launch of our dedicated green-energy subsidiary to tackle India’s EV charging gap.', image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80' },
+  { year: '2027–2028', title: 'Expansion', desc: 'Phase 1 rollout and nationwide expansion across strategic highways and metros.', image: 'https://plus.unsplash.com/premium_photo-1679917152396-4b18accacb9d?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { year: '2029', title: 'Scale', desc: 'Scaling the network with advanced battery tech and renewable energy integration.', image: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80' },
+  { year: '2030', title: 'IPO Horizon', desc: 'Targeting an Initial Public Offering, becoming a leading public green energy enterprise.', image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80' },
 ]
 
 export default function AboutPage() {
@@ -400,7 +400,7 @@ export default function AboutPage() {
         </div>
 
         {/* Timeline Horizontal Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 relative">
           {timelineSteps.map((step, idx) => (
             <motion.div
               key={step.year}
@@ -408,12 +408,23 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.12, duration: 0.6 }}
-              className="relative rounded-3xl bg-white p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#059669] transition-all space-y-3 flex flex-col justify-between group"
+              className="relative rounded-[2rem] h-[360px] sm:h-[400px] overflow-hidden group shadow-lg hover:shadow-2xl transition-all border border-slate-200/20"
             >
-              <div className="space-y-2">
-                <span className="text-3xl font-black text-[#059669] group-hover:scale-105 transition-transform inline-block origin-left">{step.year}</span>
-                <h4 className="text-lg font-bold text-slate-900">{step.title}</h4>
-                <p className="text-xs text-slate-500 leading-relaxed">{step.desc}</p>
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src={step.image} 
+                  alt={step.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                />
+              </div>
+              
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent z-10 group-hover:from-slate-900 group-hover:via-slate-800/60 transition-colors duration-500" />
+              
+              <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end">
+                <span className="text-3xl font-black text-[#00D66C] mb-2 group-hover:scale-105 transition-transform inline-block origin-left">{step.year}</span>
+                <h4 className="text-lg font-bold text-white mb-2">{step.title}</h4>
+                <p className="text-xs text-slate-300 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">{step.desc}</p>
               </div>
             </motion.div>
           ))}
