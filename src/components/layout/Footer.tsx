@@ -95,7 +95,7 @@ export default function Footer() {
             <a href="#cookies" className="hover:text-slate-300">Cookie Preferences</a>
           </div>
           <p className="flex items-center gap-1">
-            Built with <Heart className="h-3.5 w-3.5 text-[#00D66C] fill-[#00D66C]" /> for a zero-emission future.
+            Powered By <a href="https://extechnology.in/" target='_blank' rel="noopener noreferrer" className="text-[#00D66C]">Extechnology.in</a>
           </p>
         </div>
       </div>
