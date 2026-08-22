@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Building2, CheckCircle2, ArrowRight, ShieldCheck, Zap } from 'lucide-react'
 

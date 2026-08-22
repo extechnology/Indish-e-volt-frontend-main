@@ -1,399 +1,342 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import {
-  Building2,
-  CheckCircle2,
-  ArrowRight,
-  ShieldCheck,
-  Zap,
-  TrendingUp,
-  DollarSign,
-  Briefcase,
-  Store,
-  Hotel,
-  Building,
-  Truck,
-  Sparkles,
+import { 
+  Building2, CheckCircle2, ArrowRight, ShieldCheck, Zap, TrendingUp, 
+  MapPin, BatteryCharging, Users, Target, Activity 
 } from 'lucide-react'
 import PageHero from '../components/sections/PageHero'
 
-/* ── Property Types for ROI Calculator ── */
-const propertyTypes = [
-  { id: 'retail', name: 'Retail / Mall', multiplier: 220000, avgDwell: '45 mins', traffic: 'High' },
-  { id: 'hotel', name: 'Hotel & Resort', multiplier: 180000, avgDwell: '3 hours', traffic: 'Medium' },
-  { id: 'office', name: 'Commercial Office', multiplier: 160000, avgDwell: '8 hours', traffic: 'High' },
-  { id: 'highway', name: 'Highway Plaza', multiplier: 340000, avgDwell: '25 mins', traffic: 'Ultra High' },
-]
-
-/* ── Turnkey Installation Steps ── */
-const turnkeySteps = [
-  {
-    step: '01',
-    title: 'Free Site Audit',
-    desc: 'Our electrical engineers conduct a complimentary site assessment to evaluate transformer capacity and optimal parking layout.',
-  },
-  {
-    step: '02',
-    title: '$0 Upfront CapEx',
-    desc: 'Indish-e-Volt funds 100% of charger hardware, liquid-cooled dispensers, civil works, and utility grid upgrades.',
-  },
-  {
-    step: '03',
-    title: 'Installation & Signage',
-    desc: 'We install 350kW CCS2 dispensers, LED canopy lighting, and branded station signages within 14 business days.',
-  },
-  {
-    step: '04',
-    title: 'Automated Revenue Share',
-    desc: 'Sit back and earn recurring monthly revenue payouts directly into your corporate bank account via automated reporting.',
-  },
-]
-
-/* ── Commercial Sectors Grid ── */
-const sectors = [
-  {
-    icon: Store,
-    title: 'Retail & Malls',
-    desc: 'Increase customer dwell time by 40% and attract high-income EV owners who shop while charging.',
-  },
-  {
-    icon: Hotel,
-    title: 'Hospitality & Resorts',
-    desc: 'Offer premium EV charging as an amenity for overnight guests and boost booking conversion rates.',
-  },
-  {
-    icon: Building,
-    title: 'Commercial Office Parks',
-    desc: 'Meet LEED sustainability standards and fulfill corporate tenant demand for workplace EV charging.',
-  },
-  {
-    icon: Truck,
-    title: 'Logistics & Fleet Depots',
-    desc: 'Power commercial delivery vans and electric taxi fleets with dedicated high-voltage charging corridors.',
-  },
-]
-
-/* ── Case Studies ── */
-const caseStudies = [
-  {
-    host: 'Phoenix Marketcity Mall',
-    city: 'Mumbai',
-    bays: '12 Chargers Installed',
-    results: '₹42 Lakhs Annual Host Revenue · 8,400 Monthly Charging Sessions',
-    quote: 'Indish-e-Volt turned unused parking bays into our highest yielding passive revenue asset.',
-  },
-  {
-    host: 'JW Marriott Horizon Plaza',
-    city: 'Bangalore',
-    bays: '8 Supercharging Bays',
-    results: '+28% Increase in Guest Bookings · 100% Solar Powered Canopy',
-    quote: 'Our guests demand ultra-fast charging. Indish-e-Volt handled everything with zero upfront cost.',
-  },
-]
-
 export default function PartnersPage() {
-  const [selectedProperty, setSelectedProperty] = useState(propertyTypes[0])
-  const [baysCount, setBaysCount] = useState(6)
-  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
 
-  // Calculations
-  const annualRevenue = Math.round(selectedProperty.multiplier * (baysCount / 2))
-  const co2AvoidedTons = Math.round(baysCount * 32)
-
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setFormSubmitted(true)
+    setSubmitted(true)
   }
+
+  const marketIndicators = [
+    { value: '1.58M', label: 'Charging market volume by 2035 (Projected ~22% CAGR)', prefix: '1.56M →' },
+    { value: '7.29%', label: 'EV penetration of total auto sales in India, Q3FY26', prefix: '' },
+    { value: '+51%', label: 'YOY Growth in EV car sales, January 2026', prefix: '' },
+    { value: '29,000+', label: 'Public charging stations nationwide, in under 3 years', prefix: '5,151 →' },
+    { value: '72,000', label: 'PM E-DRIVE target chargers, backed by ₹2,000 Cr allocation', prefix: '' },
+    { value: '~29%', label: 'Of FAME-II sanctioned chargers still nonoperational', prefix: '' },
+  ]
+
+  const specs = [
+    { label: 'Max Output Power', value: '180 kW' },
+    { label: 'Output Voltage', value: '200–1000 V DC' },
+    { label: 'Max Current', value: '520 A' },
+    { label: 'Connectors', value: 'CCS2 & CHAdeMO' },
+    { label: 'Efficiency', value: '>95%' },
+    { label: 'Dimensions', value: '850 × 700 × 2000 mm' },
+  ]
+
+  const targetCustomers = [
+    'Individual EV Owners', 'Fleet Operators', 'Corporate Campuses', 
+    'Malls & Retail Hubs', 'Hotels & Hospitality', 'Highway Rest Stops', 
+    'Residential Associations (RWAs)', 'Government & Public Agencies'
+  ]
 
   return (
     <div className="w-full overflow-hidden bg-[#FAFCFA]">
-
       <PageHero
-        badge="Property & Host Partnerships"
-        badgeIcon={<Building2 className="h-3.5 w-3.5 fill-[#00D66C]" />}
-        title="MONETIZE PARKING LOTS"
-        titleHighlight="WITH ZERO COST."
-        description="Turn your parking lot into a high-yield EV charging destination. We handle installation, hardware, and maintenance."
-        image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80"
-        imageAlt="Commercial EV Charging Host Station"
+        badge="Indish Business Model"
+        badgeIcon={<TrendingUp className="h-3.5 w-3.5 fill-[#00D66C]" />}
+        title="INDIA'S EV CHARGING"
+        titleHighlight="OPPORTUNITY."
+        description="India's EV charging market is in a structural growth phase, driven by rapid EV adoption, strong government policy support, and rising private-sector participation."
+        image="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageAlt="Indish eVolt Partnership"
       />
 
-      {/* ─── SECTION 2: Interactive Host ROI & Revenue Calculator ─── */}
-      <section className="py-20 sm:py-28 px-5 sm:px-8 max-w-7xl mx-auto space-y-16">
+      {/* Market Validation */}
+      <section className="py-20 px-5 sm:px-8 max-w-7xl mx-auto space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E6F9EE] text-[#00D66C] text-xs font-extrabold uppercase tracking-wider">
-            <Sparkles className="h-3.5 w-3.5" /> Host Earnings Estimator
-          </div>
-          <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] font-black text-slate-900 tracking-tight leading-tight">
-            Calculate Your <span className="text-[#00D66C]">Annual Passive Revenue.</span>
-          </h2>
-          <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
-            See how much your commercial parking property can generate with Indish-e-Volt 350kW host revenue share.
-          </p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[clamp(2rem,4vw,3rem)] font-black text-slate-900 tracking-tight leading-tight"
+          >
+            Market <span className="text-[#059669]">Indicators.</span>
+          </motion.h2>
         </div>
 
-        {/* ROI Calculator Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch rounded-3xl bg-white border border-slate-200/90 shadow-2xl p-6 sm:p-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {marketIndicators.map((stat, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#00D66C] transition-all"
+            >
+              {stat.prefix && <span className="text-sm font-bold text-slate-400 block mb-1">{stat.prefix}</span>}
+              <div className="text-4xl font-black text-[#059669] mb-3">{stat.value}</div>
+              <p className="text-sm text-slate-600 font-medium leading-relaxed">{stat.label}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-slate-950 rounded-3xl p-8 sm:p-12 border border-slate-800 text-white shadow-2xl relative overflow-hidden mt-12"
+        >
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#00D66C]/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="relative z-10 max-w-4xl">
+            <h3 className="text-2xl font-black text-[#00D66C] mb-4 flex items-center gap-3">
+              <MapPin className="h-6 w-6" /> Regional Opportunity
+            </h3>
+            <p className="text-slate-300 leading-relaxed sm:text-lg">
+              South India is the fastest-growing region for EV adoption, with Kerala posting one of the country's highest EV penetration rates. Government targets are ambitious but execution has lagged — creating room for a disciplined, partnership-driven operator like Indish eVolt to move quickly where public rollout has been slow.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Partnership Models */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200 px-5 sm:px-8">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+             <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-200 text-slate-700 text-xs font-extrabold uppercase tracking-wider"
+            >
+              <Users className="h-3.5 w-3.5" /> Collaboration
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-[clamp(2rem,4vw,3rem)] font-black text-slate-900 tracking-tight leading-tight"
+            >
+              Partnership <span className="text-[#059669]">Models.</span>
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[2.5rem] p-8 sm:p-12 border border-slate-200 shadow-xl"
+            >
+              <div className="h-16 w-16 rounded-2xl bg-[#E8F8C8] flex items-center justify-center mb-8">
+                <Building2 className="h-8 w-8 text-[#059669]" />
+              </div>
+              <h3 className="text-2xl font-black text-slate-900 mb-2">Location Partner</h3>
+              <p className="text-[#059669] font-bold text-sm mb-6 uppercase tracking-wide">Partner with your space, power the future</p>
+              
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>Provide your space for an Indish eVolt charging station and earn <strong className="text-slate-900">₹2 per unit charged</strong>, with no machine investment required.</p>
+                <div className="h-px w-full bg-slate-100 my-4" />
+                <h4 className="font-bold text-slate-900">Machine Investment Partner</h4>
+                <p>Invest approximately <strong>₹30 lakh</strong> in one charging machine. After ₹7/unit KSEB cost and ₹5/unit maintenance, the investor receives <strong>₹13 per unit</strong> as the projected net share.</p>
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-sm mt-4">
+                  <span className="font-bold text-slate-900 block mb-1">Example Projection:</span>
+                  10,000 units/month × ₹13 = ₹1.30 lakh/month
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-slate-950 rounded-[2.5rem] p-8 sm:p-12 border border-slate-800 shadow-xl text-white relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#00D66C]/15 rounded-full blur-[100px] pointer-events-none" />
+              <div className="relative z-10">
+                <div className="h-16 w-16 rounded-2xl bg-[#00D66C]/20 flex items-center justify-center mb-8">
+                  <Activity className="h-8 w-8 text-[#00D66C]" />
+                </div>
+                <h3 className="text-2xl font-black text-white mb-2">Investment Partner</h3>
+                <p className="text-[#00D66C] font-bold text-sm mb-6 uppercase tracking-wide">Grow with India's Green Energy Network</p>
+                
+                <div className="space-y-4 text-slate-300 leading-relaxed">
+                  <p>Invest in Indish eVolt's charging infrastructure: the EV charging machine, transformer and associated assets — protected under a legal investment agreement.</p>
+                  <p>Investment Partners earn two ways:</p>
+                  <ul className="list-disc pl-5 space-y-2 text-white font-medium">
+                    <li>A fixed 1% monthly return on their invested amount</li>
+                    <li>Plus a share of 20% of Indish eVolt's overall company profit</li>
+                  </ul>
+                  <p className="text-sm text-slate-400 mt-4 italic">
+                    * Paid per the agreed schedule; investment rights are transferable to another eligible person, subject to agreement terms.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hardware & Specs */}
+      <section className="py-20 px-5 sm:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="space-y-6"
+          >
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Planned Hardware Specifications</h2>
+            <p className="text-slate-600 leading-relaxed">
+              Our hardware is designed for robust, fast-charging capabilities to ensure reliability and speed for end-users while maximizing throughput for our partners.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+              {specs.map((spec, i) => (
+                <div key={i} className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col">
+                  <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">{spec.label}</span>
+                  <span className="text-lg font-black text-slate-900">{spec.value}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+          <motion.div
+             initial={{ opacity: 0, scale: 0.9 }}
+             whileInView={{ opacity: 1, scale: 1 }}
+             viewport={{ once: true }}
+             className="relative rounded-[2rem] overflow-hidden shadow-2xl h-[500px]"
+          >
+            <img src="https://images.unsplash.com/photo-1704475447074-10f039c137dc?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Charger Hardware" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+            <div className="absolute bottom-8 left-8 right-8 text-white">
+              <Zap className="h-8 w-8 text-[#00D66C] mb-3" />
+              <div className="text-2xl font-black">180 kW DC Fast Charging</div>
+              <div className="text-sm text-slate-300">Dual Connector Configuration</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Competitive Landscape & Target Segments */}
+      <section className="py-20 bg-slate-950 text-white px-5 sm:px-8 relative overflow-hidden">
+        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#00D66C]/10 rounded-full blur-[150px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto space-y-20 relative z-10">
           
-          {/* Controls */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-3">
-              <label className="text-xs font-black uppercase tracking-wider text-slate-500">
-                1. Select Property Type
-              </label>
-              <div className="grid grid-cols-2 gap-3">
-                {propertyTypes.map((p) => (
-                  <button
-                    key={p.id}
-                    onClick={() => setSelectedProperty(p)}
-                    className={`p-4 rounded-2xl border text-left transition-all flex flex-col justify-between ${
-                      selectedProperty.id === p.id
-                        ? 'border-[#00D66C] bg-[#E6F9EE] text-slate-900 ring-2 ring-[#00D66C]/40 shadow-md'
-                        : 'border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300'
-                    }`}
-                  >
-                    <p className="text-sm font-black">{p.name}</p>
-                    <p className="text-[11px] text-slate-400 font-semibold mt-1">Dwell: {p.avgDwell} · Traffic: {p.traffic}</p>
-                  </button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00D66C]/15 border border-[#00D66C]/30 text-[#00D66C] text-xs font-extrabold uppercase tracking-wider mb-6"
+              >
+                <Target className="h-3.5 w-3.5" /> Competitive Edge
+              </motion.div>
+              <h2 className="text-3xl sm:text-4xl font-black mb-6">Where Indish eVolt Stands Out</h2>
+              <p className="text-slate-300 leading-relaxed mb-8">
+                India's EV charging market includes established national networks (Tata Power EZ Charge, Statiq, Charge Zone, Ather Grid) as well as regional operators. Indish eVolt differentiates on flexible site deployment, transparent per-unit pricing, and a partnership-first model.
+              </p>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <ShieldCheck className="h-6 w-6 text-[#00D66C] shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-white text-lg">Profit-Sharing Partnerships</h4>
+                    <p className="text-sm text-slate-400">Most competitors don't offer investors a direct stake in company revenue.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <BatteryCharging className="h-6 w-6 text-[#00D66C] shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-white text-lg">Full Charger Range</h4>
+                    <p className="text-sm text-slate-400">3.3 kW to 480 kW, covering every site type from residential to highway fast-charging.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Building2 className="h-6 w-6 text-[#00D66C] shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-white text-lg">Group Backing</h4>
+                    <p className="text-sm text-slate-400">Operational discipline inherited from Indish World's 29-year track record.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 rounded-[2rem] p-8 sm:p-10 border border-slate-800 shadow-xl">
+              <h3 className="text-2xl font-black mb-8 flex items-center gap-3">
+                <Users className="h-6 w-6 text-[#00D66C]" /> Target Customers & Segments
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {targetCustomers.map((customer, idx) => (
+                  <div key={idx} className="flex items-center gap-3 bg-slate-950 p-4 rounded-xl border border-slate-800">
+                    <CheckCircle2 className="h-4 w-4 text-[#00D66C] shrink-0" />
+                    <span className="text-sm font-medium text-slate-200">{customer}</span>
+                  </div>
                 ))}
               </div>
             </div>
-
-            <div className="space-y-4">
-              <div className="flex justify-between items-center text-xs font-bold">
-                <span className="text-slate-500">Number of Dedicated Bays:</span>
-                <span className="text-2xl font-black text-[#00D66C]">{baysCount} Charging Bays</span>
-              </div>
-              <input
-                type="range"
-                min="2"
-                max="24"
-                step="2"
-                value={baysCount}
-                onChange={(e) => setBaysCount(Number(e.target.value))}
-                className="w-full accent-[#00D66C] cursor-pointer"
-              />
-              <div className="flex justify-between text-[11px] font-bold text-slate-400">
-                <span>2 Bays (Min)</span>
-                <span>12 Bays (Standard)</span>
-                <span>24 Bays (Superhub)</span>
-              </div>
-            </div>
           </div>
-
-          {/* Results Box */}
-          <div className="lg:col-span-5 rounded-2xl bg-slate-950 text-white p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-xl border border-slate-800">
-            <div className="space-y-4">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#00D66C]">Estimated Earnings</span>
-              
-              <div className="space-y-1">
-                <p className="text-xs text-slate-400 font-semibold">Est. Annual Passive Host Revenue</p>
-                <p className="text-4xl sm:text-5xl font-black text-[#00D66C]">
-                  ₹{(annualRevenue / 100000).toFixed(1)} <span className="text-xl text-white font-bold">Lakhs / yr</span>
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800 text-xs">
-                <div className="bg-slate-900 p-3 rounded-xl">
-                  <p className="text-slate-400 font-medium">CapEx Required</p>
-                  <p className="text-white font-black text-sm">₹0 (Fully Funded)</p>
-                </div>
-                <div className="bg-slate-900 p-3 rounded-xl">
-                  <p className="text-slate-400 font-medium">Est. Annual CO2 Offset</p>
-                  <p className="text-[#00D66C] font-black text-sm">{co2AvoidedTons} Tons</p>
-                </div>
-              </div>
-            </div>
-
-            <a
-              href="#host-form"
-              className="flex w-full items-center justify-center gap-2 py-3.5 rounded-xl bg-[#00D66C] text-slate-950 font-black text-sm hover:bg-[#00C060] transition-all shadow-lg shadow-[#00D66C]/20"
-            >
-              <span>Apply for Site Survey</span>
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-
         </div>
       </section>
 
-      {/* ─── SECTION 3: Turnkey 4-Step Installation Process ─── */}
-      <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-16 relative z-10">
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#00D66C]">Turnkey Infrastructure</span>
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight">
-              We Handle Everything. <span className="text-[#00D66C]">You Earn Revenue.</span>
-            </h2>
-            <p className="text-slate-400 text-sm sm:text-base">
-              From civil engineering and grid permits to 24/7 equipment maintenance, our team manages the end-to-end lifecycle.
+      {/* Contact Form Section */}
+      <section className="py-20 px-5 sm:px-8 max-w-3xl mx-auto">
+        <div className="text-center space-y-4 mb-12">
+           <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[clamp(2rem,4vw,3rem)] font-black text-slate-900 tracking-tight leading-tight"
+          >
+            Join the <span className="text-[#059669]">Movement.</span>
+          </motion.h2>
+          <p className="text-slate-600 max-w-xl mx-auto">Fill out your details below to get a free site assessment and customized host revenue share plan.</p>
+        </div>
+
+        {submitted ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="rounded-[2rem] bg-white p-12 border border-slate-200 shadow-xl text-center space-y-4"
+          >
+            <CheckCircle2 className="mx-auto h-16 w-16 text-[#059669]" />
+            <h2 className="text-2xl font-bold text-slate-900">Application Submitted!</h2>
+            <p className="text-slate-500">
+              Our infrastructure engineering team will review your application and contact you shortly.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {turnkeySteps.map((step) => (
-              <div
-                key={step.step}
-                className="rounded-3xl bg-slate-900/90 border border-slate-800 p-7 space-y-4 hover:border-[#00D66C] transition-all"
-              >
-                <span className="text-3xl font-black text-[#00D66C]">{step.step}</span>
-                <h3 className="text-xl font-bold text-white">{step.title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SECTION 4: Commercial Sectors Grid ─── */}
-      <section className="py-20 sm:py-28 px-5 sm:px-8 max-w-7xl mx-auto space-y-16">
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-[#00D66C]">Tailored Solutions</span>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
-            Built for Every Commercial <span className="text-[#00D66C]">Real Estate Asset.</span>
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {sectors.map((s) => {
-            const Icon = s.icon
-            return (
-              <div
-                key={s.title}
-                className="rounded-3xl bg-white p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#00D66C] transition-all space-y-4"
-              >
-                <div className="h-12 w-12 rounded-2xl bg-[#E6F9EE] text-[#00D66C] flex items-center justify-center">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900">{s.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">{s.desc}</p>
-              </div>
-            )
-          })}
-        </div>
-      </section>
-
-      {/* ─── SECTION 5: Host Case Studies ─── */}
-      <section className="py-20 bg-slate-100 px-5 sm:px-8">
-        <div className="max-w-7xl mx-auto space-y-14">
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#00D66C]">Proven Success</span>
-            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
-              Trusted by Top <span className="text-[#00D66C]">Property Groups.</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {caseStudies.map((cs) => (
-              <div key={cs.host} className="rounded-3xl bg-white p-8 border border-slate-200 shadow-md space-y-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-xl font-black text-slate-900">{cs.host}</h3>
-                    <p className="text-xs text-slate-400 font-bold">{cs.city} · {cs.bays}</p>
-                  </div>
-                  <CheckCircle2 className="h-6 w-6 text-[#00D66C]" />
-                </div>
-
-                <div className="p-4 rounded-2xl bg-[#E6F9EE] text-[#059669] font-bold text-xs">
-                  {cs.results}
-                </div>
-
-                <p className="text-xs text-slate-500 italic leading-relaxed">&ldquo;{cs.quote}&rdquo;</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SECTION 6: Host Application Form ─── */}
-      <section id="host-form" className="py-20 sm:py-28 px-5 sm:px-8 max-w-4xl mx-auto space-y-12">
-        <div className="text-center space-y-4">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-[#00D66C]">Get Started</span>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
-            Apply to Host a Station
-          </h2>
-          <p className="text-slate-500 text-sm max-w-xl mx-auto">
-            Fill out your property details below for a free site evaluation and customized revenue proposal within 24 hours.
-          </p>
-        </div>
-
-        {formSubmitted ? (
-          <div className="rounded-3xl bg-white p-12 border border-slate-200 shadow-xl text-center space-y-4 max-w-md mx-auto">
-            <CheckCircle2 className="mx-auto h-16 w-16 text-[#00D66C]" />
-            <h3 className="text-2xl font-bold text-slate-900">Proposal Request Received!</h3>
-            <p className="text-xs text-slate-500">
-              Our site development team will review your property coordinates and contact you shortly.
-            </p>
-          </div>
+          </motion.div>
         ) : (
-          <form onSubmit={handleFormSubmit} className="rounded-3xl bg-white p-8 sm:p-10 border border-slate-200 shadow-2xl space-y-6">
+          <form onSubmit={handleSubmit} className="rounded-[2rem] bg-white p-8 sm:p-12 border border-slate-200 shadow-xl space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">First Name</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Rajesh"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none"
-                />
+                <input type="text" required placeholder="Sarah" className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none" />
               </div>
               <div>
                 <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">Last Name</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Mehta"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none"
-                />
+                <input type="text" required placeholder="Jenkins" className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">Work Email</label>
-                <input
-                  type="email"
-                  required
-                  placeholder="rajesh@propertygroup.com"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none"
-                />
+                <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">Email Address</label>
+                <input type="email" required placeholder="sarah@example.com" className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none" />
               </div>
               <div>
                 <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">Phone Number</label>
-                <input
-                  type="tel"
-                  required
-                  placeholder="+91 98765 43210"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none"
-                />
+                <input type="tel" required placeholder="+91 90000 00000" className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none" />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">Property Sector</label>
-                <select className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none">
-                  <option>Shopping Mall / Retail Center</option>
-                  <option>Hotel & Hospitality Venue</option>
-                  <option>Commercial Office Park</option>
-                  <option>Highway Rest Stop / Plaza</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">Available Parking Bays</label>
-                <select className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none">
-                  <option>2 - 4 Bays</option>
-                  <option>6 - 12 Bays</option>
-                  <option>14 - 24 Bays (Superhub)</option>
-                </select>
-              </div>
+            <div>
+              <label className="block text-xs font-extrabold uppercase text-slate-500 mb-2">Partnership Interest</label>
+              <select className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 px-4 text-sm focus:border-[#00D66C] focus:bg-white focus:outline-none">
+                <option>Location Partner (Host a Station)</option>
+                <option>Machine Investment Partner</option>
+                <option>Investment Partner (Profit Sharing)</option>
+              </select>
             </div>
 
-            <button
-              type="submit"
-              className="flex w-full items-center justify-center gap-2 py-4 rounded-2xl bg-[#00D66C] text-slate-950 font-black text-sm hover:bg-[#00C060] transition-all shadow-xl shadow-[#00D66C]/20"
-            >
-              <span>Submit Partner Inquiry</span>
+            <button type="submit" className="flex w-full items-center justify-center gap-2 py-4 rounded-xl bg-[#00D66C] text-slate-950 font-black text-sm hover:bg-[#00C060] hover:shadow-lg transition-all mt-4">
+              <span>Submit Application</span>
               <ArrowRight className="h-4 w-4" />
             </button>
           </form>
