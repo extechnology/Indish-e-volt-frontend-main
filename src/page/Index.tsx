@@ -1,6 +1,7 @@
 import HeroSection from '../components/sections/HeroSection'
 import HowItWorksSection from '../components/sections/AppShowcaseSection'
 import WhyChooseUsSection from '../components/sections/WhyChooseUsSection'
+import StationArchitectureSection from '../components/sections/StationArchitectureSection'
 import StatsAndTestimonialsSection from '../components/sections/StatsAndTestimonialsSection'
 import NetworkShowcaseSection from '../components/sections/NetworkShowcaseSection'
 import SustainabilitySection from '../components/sections/SustainabilitySection'
@@ -18,7 +19,10 @@ export default function Index() {
       {/* Section 3: Why Choose Us – split layout with images and feature points */}
       <WhyChooseUsSection />
 
-      {/* Section 4: Stats & Testimonials – animated counters + dark testimonial cards */}
+      {/* Section 4: 180 KW Station Architecture */}
+      <StationArchitectureSection />
+
+      {/* Section 5: Stats & Testimonials – animated counters + dark testimonial cards */}
       <StatsAndTestimonialsSection />
 
       {/* Section 5: Network Showcase – image grid gallery */}
