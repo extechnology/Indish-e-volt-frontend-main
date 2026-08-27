@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Shield, Globe, Heart } from 'lucide-react'
 
@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="md:col-span-5 space-y-2">
             <Link to="/" className="inline-flex items-center" aria-label="Indish-e-Volt Home">
               <img
-                src="/logo-trans.png"
+                src="/Updated-INDISH-LOGO.png"
                 alt="Indish-e-Volt Logo"
                 className="h-20 w-auto object-contain brightness-0 invert"
               />

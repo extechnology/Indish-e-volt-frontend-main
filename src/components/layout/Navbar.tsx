@@ -70,7 +70,7 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
             {/* Logo */}
             <Link to="/" className="flex items-center group shrink-0" aria-label="Indish-e-Volt Home">
               <img
-                src="/logo-trans.png"
+                src="/Updated-INDISH-LOGO.png"
                 alt="Indish-e-Volt Logo"
                 className="object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-sm"
                 style={{
@@ -178,7 +178,7 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
             {/* Drawer Top */}
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <img src="/logo-trans.png" alt="Indish-e-Volt Logo" className="h-14 w-auto object-contain brightness-0 invert" />
+                <img src="/Updated-INDISH-LOGO.png" alt="Indish-e-Volt Logo" className="h-14 w-auto object-contain brightness-0 invert" />
               </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
