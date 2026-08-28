@@ -17,9 +17,9 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <Link to="/" className="inline-flex items-center" aria-label="Indish-e-Volt Home">
               <img
-                src="/Updated-INDISH-LOGO.png"
+                src="/INDIS-fit-new-logo.png"
                 alt="Indish-e-Volt Logo"
-                className="h-16 w-auto object-contain brightness-0 invert"
+                className="h-20 w-auto object-contain brightness-0 invert"
               />
             </Link>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">

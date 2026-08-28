@@ -393,9 +393,9 @@ export default function StationArchitectureSection() {
             <div className="flex items-center justify-start lg:justify-end gap-3 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-800/80">
               <div className="flex items-center gap-2.5">
                 <img
-                  src="/Updated-INDISH-LOGO.png"
+                  src="/INDIS-fit-new-logo.png"
                   alt="Indish eVolt"
-                  className="h-9 w-auto object-contain brightness-0 invert"
+                  className="h-14 w-auto object-contain brightness-0 invert"
                 />
               </div>
             </div>
