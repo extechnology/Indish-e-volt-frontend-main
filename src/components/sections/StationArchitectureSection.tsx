@@ -21,7 +21,7 @@ export default function StationArchitectureSection() {
   }
 
   const specs = [
-    { label: 'MAX OUTPUT POWER', value: '180 kW', highlight: true, icon: Zap },
+    { label: 'MAX OUTPUT POWER', value: '160 kW', highlight: true, icon: Zap },
     { label: 'OUTPUT VOLTAGE RANGE', value: '200 – 1000 V DC', highlight: false, icon: Gauge },
     { label: 'MAX OUTPUT CURRENT', value: '520 A', highlight: false, icon: Zap },
     { label: 'CONNECTOR TYPES', value: 'Dual Gun (CCS2 + CHAdeMO)', highlight: true, icon: Cpu },
@@ -35,7 +35,7 @@ export default function StationArchitectureSection() {
 
   const keyHighlights = [
     {
-      title: '180 kW High-Speed Dual Output',
+      title: '160 kW High-Speed Dual Output',
       desc: 'Simultaneous rapid charging via dual liquid-cooled guns with real-time dynamic load sharing.',
       icon: Zap,
       tag: 'DYNAMIC DLM'
@@ -107,7 +107,7 @@ export default function StationArchitectureSection() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-[clamp(2.4rem,5.5vw,4.6rem)] font-black text-white tracking-tight leading-[1.08]"
           >
-            180 kW Station <span className="text-[#00D66C] drop-shadow-[0_0_35px_rgba(0,214,108,0.35)]">Architecture.</span>
+            160 kW Station <span className="text-[#00D66C] drop-shadow-[0_0_35px_rgba(0,214,108,0.35)]">Architecture.</span>
           </motion.h2>
 
           <motion.p
@@ -117,7 +117,7 @@ export default function StationArchitectureSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-slate-300/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-normal"
           >
-            Engineered for high-throughput public charging hubs and highway corridors. Explore the technical blueprint, liquid-cooled power delivery, and coastal-grade thermal architecture of Indish eVolt's <span className="text-[#00D66C] font-semibold">180kW</span> station.
+            Engineered for high-throughput public charging hubs and highway corridors. Explore the technical blueprint, liquid-cooled power delivery, and coastal-grade thermal architecture of Indish eVolt's <span className="text-[#00D66C] font-semibold">160kW</span> station.
           </motion.p>
         </div>
 
@@ -145,7 +145,7 @@ export default function StationArchitectureSection() {
                     <Zap className="h-3.5 w-3.5 fill-[#00D66C]" /> HIGH-DENSITY DC POWER
                   </span>
                   <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#0A1610] border border-slate-800 text-slate-300 text-xs font-bold">
-                    Dual Gun 180kW
+                    Dual Gun 160kW
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-bold text-slate-300 bg-[#0A1610] border border-slate-800/80 px-3 py-1.5 rounded-full">
@@ -161,7 +161,7 @@ export default function StationArchitectureSection() {
               >
                 <img
                   src="/indish-hardware-technology-180kw.webp"
-                  alt="Indish 180 KW Station Architecture Blueprint & Technical Specifications"
+                  alt="Indish 160 KW Station Architecture Blueprint & Technical Specifications"
                   className="w-full h-auto max-h-[520px] object-contain rounded-xl transition-transform duration-700 ease-out group-hover/img:scale-[1.02]"
                   loading="eager"
                 />
@@ -212,7 +212,7 @@ export default function StationArchitectureSection() {
                   <p className="text-xs text-slate-500 font-medium mt-0.5">Commercial Standard Station Datasheet</p>
                 </div>
                 <span className="text-xs font-black px-3.5 py-1.5 rounded-full bg-[#E8F8C8] text-[#059669] border border-[#059669]/20 shadow-xs">
-                  180 kW DC Model
+                  160 kW DC Model
                 </span>
               </div>
 
@@ -428,10 +428,10 @@ export default function StationArchitectureSection() {
                   <div className="h-3 w-3 rounded-full bg-[#00D66C] shadow-[0_0_8px_#00D66C]" />
                   <div>
                     <h3 className="text-white font-black text-base sm:text-lg">
-                      180 KW Station Architecture Blueprint
+                      160 KW Station Architecture Blueprint
                     </h3>
                     <p className="text-xs text-slate-400">
-                      Indish eVolt 180kW DC Fast Charger • Complete Engineering Schematic
+                      Indish eVolt 160kW DC Fast Charger • Complete Engineering Schematic
                     </p>
                   </div>
                 </div>
@@ -460,7 +460,7 @@ export default function StationArchitectureSection() {
               <div className="rounded-2xl overflow-auto bg-black/90 border border-slate-800 flex items-center justify-center p-2 sm:p-6 max-h-[72vh] min-h-[300px]">
                 <img
                   src="/indish-hardware-technology-180kw.webp"
-                  alt="Indish eVolt 180KW Station Architecture High Resolution Blueprint"
+                  alt="Indish eVolt 160KW Station Architecture High Resolution Blueprint"
                   style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'center center' }}
                   className="max-h-[66vh] w-auto object-contain rounded-xl transition-transform duration-200"
                 />

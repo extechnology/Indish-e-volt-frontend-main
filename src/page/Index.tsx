@@ -19,7 +19,7 @@ export default function Index() {
       {/* Section 3: Why Choose Us – split layout with images and feature points */}
       <WhyChooseUsSection />
 
-      {/* Section 4: 180 KW Station Architecture */}
+      {/* Section 4: 160 KW Station Architecture */}
       <StationArchitectureSection />
 
       {/* Section 5: Stats & Testimonials – animated counters + dark testimonial cards */}

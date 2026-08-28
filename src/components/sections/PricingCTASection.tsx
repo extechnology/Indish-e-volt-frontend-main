@@ -12,7 +12,7 @@ export default function PricingCTASection() {
       rate: '$0.28 / kWh',
       features: [
         'Access to 1,400+ chargers nationwide',
-        'Standard 150kW & 350kW speed',
+        'Standard 60kW & 160kW speed',
         'Pay with Credit Card, Apple Pay, NFC',
         'Basic station availability map',
       ],
@@ -42,7 +42,7 @@ export default function PricingCTASection() {
       period: 'per vehicle / month',
       rate: 'Custom Bulk Rate',
       features: [
-        'Unlimited 350kW fast charging',
+        'Unlimited 160kW fast charging',
         'Multi-vehicle centralized billing dashboard',
         'Automated carbon offset tax reporting',
         'Dedicated account manager & 99.9% SLA',

@@ -19,7 +19,7 @@ export default function SustainabilitySection() {
     },
     {
       step: '03',
-      title: 'Ultra-Fast 350kW Dispenser',
+      title: 'Ultra-Fast 160kW Dispenser',
       desc: 'Liquid-cooled cables pump up to 350 miles of range per hour, redefining your EV.',
       icon: Zap,
       image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=85',

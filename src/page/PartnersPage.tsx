@@ -28,7 +28,7 @@ export default function PartnersPage() {
   ]
 
   const specs = [
-    { label: 'Max Output Power', value: '180 kW', highlight: true },
+    { label: 'Max Output Power', value: '160 kW', highlight: true },
     { label: 'Output Voltage', value: '200 – 1000 V DC', highlight: false },
     { label: 'Max Output Current', value: '520 A', highlight: false },
     { label: 'Connector Types', value: 'CCS2 + CHAdeMO (Dual Gun)', highlight: true },
@@ -44,7 +44,7 @@ export default function PartnersPage() {
 
   const hardwareHighlights = [
     {
-      title: '180kW Dual Gun Fast Charging',
+      title: '160kW Dual Gun Fast Charging',
       desc: 'Liquid-cooled CCS2 & CHAdeMO dual guns ensure simultaneous fast-charging and complete vehicle compatibility.',
       icon: Zap,
     },
@@ -73,7 +73,7 @@ export default function PartnersPage() {
     },
     {
       title: 'Power Module Stack',
-      desc: '180 kW DC high-density power stack with hot-swappable, scalable architecture.',
+      desc: '160 kW DC high-density power stack with hot-swappable, scalable architecture.',
       tag: 'Scalable Core'
     },
     {
@@ -227,8 +227,8 @@ export default function PartnersPage() {
                   <p>Invest in Indish eVolt's charging infrastructure: the EV charging machine, transformer and associated assets — protected under a legal investment agreement.</p>
                   <p>Investment Partners earn two ways:</p>
                   <ul className="list-disc pl-5 space-y-2 text-white font-medium">
-                    <li>A fixed 1% monthly return on their invested amount</li>
-                    <li>Plus a share of 20% of Indish eVolt's overall company profit</li>
+                    <li>Expected profit of 1% monthly return on their invested amount</li>
+                    <li>Profit sharing of 20% of Indish eVolt's overall company profit</li>
                   </ul>
                   <p className="text-sm text-slate-400 mt-4 italic">
                     * Paid per the agreed schedule; investment rights are transferable to another eligible person, subject to agreement terms.
@@ -266,7 +266,7 @@ export default function PartnersPage() {
             transition={{ delay: 0.1 }}
             className="text-slate-600 text-base max-w-2xl mx-auto"
           >
-            Explore our commercial 180kW fast charger architecture and our next-generation exploded modular engineering stack.
+            Explore our commercial 160kW fast charger architecture and our next-generation exploded modular engineering stack.
           </motion.p>
 
           {/* Interactive View Switcher Tabs */}
@@ -280,7 +280,7 @@ export default function PartnersPage() {
                   : 'text-slate-600 hover:text-slate-950'
               }`}
             >
-              <Zap className="h-4 w-4" /> 180kW Station Architecture
+              <Zap className="h-4 w-4" /> 160kW Station Architecture
             </button>
             <button
               type="button"
@@ -336,7 +336,7 @@ export default function PartnersPage() {
               >
                 <img 
                   src={activeDiagramTab === 'station' ? '/indish-hardware-technology-180kw.webp' : '/indish-exploded-engineering-concept.webp'} 
-                  alt={activeDiagramTab === 'station' ? 'Indish eVolt 180kW DC Fast Charger Technical Specifications' : 'Indish eVolt Exploded Modular Engineering Concept'} 
+                  alt={activeDiagramTab === 'station' ? 'Indish eVolt 160kW DC Fast Charger Technical Specifications' : 'Indish eVolt Exploded Modular Engineering Concept'} 
                   className="w-full h-auto object-contain rounded-2xl transition-transform duration-500 group-hover/img:scale-[1.02]"
                 />
 
@@ -361,7 +361,7 @@ export default function PartnersPage() {
                 >
                   <img src="/indish-hardware-technology-180kw.webp" alt="Station Spec" className="w-10 h-10 object-contain rounded-lg bg-slate-950" />
                   <div>
-                    <span className="text-xs font-bold block text-white">180kW Station</span>
+                    <span className="text-xs font-bold block text-white">160kW Station</span>
                     <span className="text-[10px] text-slate-400">Technical Datasheet</span>
                   </div>
                 </button>
@@ -406,7 +406,7 @@ export default function PartnersPage() {
                       <p className="text-xs text-slate-500">Commercial Standard Hardware Datasheet</p>
                     </div>
                     <span className="text-xs font-extrabold px-3 py-1 rounded-full bg-[#E8F8C8] text-[#059669]">
-                      180kW Model
+                      160kW Model
                     </span>
                   </div>
 
@@ -597,7 +597,7 @@ export default function PartnersPage() {
                   <div>
                     <h3 className="text-white font-black text-base sm:text-lg">
                       {modalDiagram === 'station'
-                        ? 'INDISH eVOLT 180kW Dual Gun DC Fast Charging Station'
+                        ? 'INDISH eVOLT 160kW Dual Gun DC Fast Charging Station'
                         : 'INDISH eVOLT DC Fast Charger — Exploded Engineering Concept'}
                     </h3>
                     <p className="text-xs text-slate-400">
@@ -618,7 +618,7 @@ export default function PartnersPage() {
                         modalDiagram === 'station' ? 'bg-[#00D66C] text-slate-950' : 'text-slate-300 hover:text-white'
                       }`}
                     >
-                      180kW Station
+                      160kW Station
                     </button>
                     <button
                       type="button"
@@ -646,7 +646,7 @@ export default function PartnersPage() {
               <div className="rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 flex items-center justify-center p-2 sm:p-4 max-h-[72vh]">
                 <img
                   src={modalDiagram === 'station' ? '/indish-hardware-technology-180kw.webp' : '/indish-exploded-engineering-concept.webp'}
-                  alt={modalDiagram === 'station' ? 'Indish eVolt 180kW DC Fast Charger Blueprint' : 'Indish eVolt Exploded Concept Blueprint'}
+                  alt={modalDiagram === 'station' ? 'Indish eVolt 160kW DC Fast Charger Blueprint' : 'Indish eVolt Exploded Concept Blueprint'}
                   className="max-h-[68vh] w-auto object-contain rounded-xl"
                 />
               </div>

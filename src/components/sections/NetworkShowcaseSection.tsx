@@ -59,7 +59,7 @@ export default function NetworkShowcaseSection() {
         {/* ── Image Gallery Grid (Exact Layout of Image 4) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           
-          {/* Card 1: 350kW Ultra-Fast Chargers (Spans 2 cols on LG) */}
+          {/* Card 1: 160kW Ultra-Fast Chargers (Spans 2 cols on LG) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function NetworkShowcaseSection() {
           >
             <img
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=85"
-              alt="350kW Ultra-Fast Chargers"
+              alt="160kW Ultra-Fast Chargers"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
@@ -83,7 +83,7 @@ export default function NetworkShowcaseSection() {
             {/* Bottom Content */}
             <div className="relative z-10 space-y-2">
               <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight">
-                350kW Ultra-Fast Chargers
+                160kW Ultra-Fast Chargers
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 font-medium">
                 Fastest commercially available speed in India

@@ -21,10 +21,10 @@ import PageHero from '../components/sections/PageHero'
 
 /* ── Vehicle types for Range Calculator ── */
 const vehicleTypes = [
-  { id: 'suv', name: 'Electric SUV', maxKw: 350, batterySize: 85, rangePerKw: 5.2 },
-  { id: 'sedan', name: 'Performance Sedan', maxKw: 300, batterySize: 75, rangePerKw: 6.1 },
+  { id: 'suv', name: 'Electric SUV', maxKw: 160, batterySize: 85, rangePerKw: 5.2 },
+  { id: 'sedan', name: 'Performance Sedan', maxKw: 160, batterySize: 75, rangePerKw: 6.1 },
   { id: 'hatchback', name: 'Compact EV', maxKw: 150, batterySize: 45, rangePerKw: 6.8 },
-  { id: 'commercial', name: 'Fleet / Commercial', maxKw: 350, batterySize: 120, rangePerKw: 4.5 },
+  { id: 'commercial', name: 'Fleet / Commercial', maxKw: 160, batterySize: 120, rangePerKw: 4.5 },
 ]
 
 /* ── Speed Comparison ── */
@@ -37,15 +37,15 @@ const speedComparisons = [
     color: '#64748B',
   },
   {
-    type: 'Standard DC Fast (50 kW)',
+    type: 'Standard DC Fast (160 kW)',
     time: '60 - 90 Mins',
     progress: 45,
     tag: 'Public Mall',
     color: '#0284C7',
   },
   {
-    type: 'Indish-e-Volt Ultra (350 kW)',
-    time: '12 - 15 Mins',
+    type: 'Indish-e-Volt Ultra (160 to 360 kW)',
+    time: '25 - 30 Mins',
     progress: 100,
     tag: 'Ultra Fast',
     color: '#00D66C',
@@ -150,7 +150,7 @@ export default function DriversPage() {
         badgeIcon={<Zap className="h-3.5 w-3.5 fill-[#00D66C]" />}
         title="ULTRA-FAST CHARGING"
         titleHighlight="FOR EVERY JOURNEY."
-        description="350kW liquid-cooled charging, auto plug-and-charge, and 24/7 driver lounges — powered by 100% clean energy."
+        description="160kW liquid-cooled charging, auto plug-and-charge, and 24/7 driver lounges — powered by 100% clean energy."
         image="https://images.unsplash.com/photo-1571079570759-8b8dae4c4a78?auto=format&fit=crop&w=1400&q=80"
         imageAlt="Electric Vehicle Driver Charging Station"
       />
@@ -171,7 +171,7 @@ export default function DriversPage() {
             Estimate Your <span className="text-[#00D66C]">Charge Time & Range.</span>
           </h2>
           <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
-            See how fast your EV powers up at an Indish-e-Volt 350kW Ultra-Fast Station compared to standard chargers.
+            See how fast your EV powers up at an Indish-e-Volt 160kW Ultra-Fast Station compared to standard chargers.
           </p>
         </div>
 
@@ -277,7 +277,7 @@ export default function DriversPage() {
               className="flex w-full items-center justify-center gap-2 py-3.5 rounded-xl bg-[#00D66C] text-slate-950 font-black text-sm hover:bg-[#00C060] transition-all shadow-lg shadow-[#00D66C]/20"
             >
               <MapPin className="h-4 w-4" />
-              <span>Locate 350kW Charger Near You</span>
+              <span>Locate 160kW Charger Near You</span>
             </Link>
           </div>
 
@@ -290,7 +290,7 @@ export default function DriversPage() {
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#00D66C]">Benchmark Performance</span>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight">
-              Speed Comparison: <span className="text-[#00D66C]">Why 350kW Matters.</span>
+              Speed Comparison: <span className="text-[#00D66C]">Why 160kW Matters.</span>
             </h2>
             <p className="text-slate-400 text-sm sm:text-base">
               Time spent charging is time lost on the road. Indish-e-Volt liquid-cooled dispensers cut charging wait times by up to 85%.

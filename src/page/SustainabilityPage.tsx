@@ -29,7 +29,7 @@ const lifecycleSteps = [
   },
   {
     step: '03',
-    title: '350kW Liquid Cooled Output',
+    title: '160kW Liquid Cooled Output',
     desc: 'Dispenses up to 400 miles of range per hour without thermal throttling or fossil-fuel grid strain.',
     icon: Zap,
   },

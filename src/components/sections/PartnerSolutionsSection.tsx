@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Building2, DollarSign, ShieldCheck, Zap, ArrowRight, TrendingUp, Award, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -84,7 +84,7 @@ export default function PartnerSolutionsSection() {
                       : 'text-slate-500 hover:text-slate-900'
                   }`}
                 >
-                  350kW Ultra Fast Hub
+                  160kW Ultra Fast Hub
                 </button>
               </div>
             </div>

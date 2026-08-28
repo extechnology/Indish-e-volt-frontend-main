@@ -12,7 +12,7 @@ const leftFeatures = [
   {
     icon: Zap,
     title: 'Pioneering Fast-Charge Speed',
-    desc: 'Our liquid-cooled 350kW CCS2 dispensers pump up to 400 miles of range per hour — the fastest commercially available charging technology on Indian roads today.',
+    desc: 'Our liquid-cooled 160kW CCS2 dispensers pump up to 400 miles of range per hour — the fastest commercially available charging technology on Indian roads today.',
   },
   {
     icon: BatteryCharging,
@@ -236,7 +236,7 @@ export default function WhyChooseUsSection() {
                 transition={{ delay: 0.6 }}
                 className="inline-flex flex-col gap-0.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-xl px-4 py-2.5"
               >
-                <span className="text-xs font-bold text-[#00D66C]">⚡ 350kW Ultra-Fast</span>
+                <span className="text-xs font-bold text-[#00D66C]">⚡ 160kW Ultra-Fast</span>
                 <span className="text-[11px] text-slate-300">80% in 15 mins · 99.9% Uptime</span>
               </motion.div>
             </div>

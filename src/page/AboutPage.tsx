@@ -43,7 +43,7 @@ const currentPosition = [
   },
   {
     title: 'CHARGER LINE-UP FINALIZED',
-    desc: 'Product range spans 3.3 kW AC units through 480 kW dual-gun DC fast chargers, with 120 kW Dual Gun tier newly added and a 180 kW next-generation model in R&D.',
+    desc: 'Product range spans 3.3 kW AC units through 480 kW dual-gun DC fast chargers, with 120 kW Dual Gun tier newly added and a 160 kW next-generation model in R&D.',
     icon: BatteryCharging,
   },
   {

@@ -4,7 +4,7 @@ import { Zap, BatteryCharging, Users, MapPin, TrendingUp, ShieldCheck } from 'lu
 
 const stats = [
   {
-    value: 1480,
+    value: 400,
     suffix: '+',
     label: 'Active Chargers',
     desc: 'Across 40+ metro cities',
@@ -12,7 +12,7 @@ const stats = [
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=85',
   },
   {
-    value: 350,
+    value: 160,
     suffix: 'kW',
     label: 'Max Charging Speed',
     desc: '80% charge in 15 mins',
