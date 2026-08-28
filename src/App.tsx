@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import RootLayout from './components/layout/RootLayout'
+import ScrollToTop from './components/common/ScrollToTop'
 
 const Index = lazy(() => import('./page/Index'))
 const DriversPage = lazy(() => import('./page/DriversPage'))
@@ -23,6 +24,7 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <ScrollToTop />
       <Suspense fallback={<div className="min-h-screen bg-[#FAFCFA]" />}>
         <Routes>
           <Route element={<RootLayout />}>

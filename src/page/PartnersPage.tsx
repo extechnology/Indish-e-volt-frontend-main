@@ -6,6 +6,7 @@ import {
   Droplets, Cpu, Sparkles
 } from 'lucide-react'
 import PageHero from '../components/sections/PageHero'
+import ContactUsSection from '../components/sections/ContactUsSection'
 
 export default function PartnersPage() {
   const [activeDiagramTab, setActiveDiagramTab] = useState<'station' | 'exploded'>('station')
@@ -800,6 +801,11 @@ export default function PartnersPage() {
           </form>
         )}
       </section>
+
+      {/* Direct Contact Us & Regional Offices Section */}
+      <div id="contact-us" className="border-t border-slate-200/60 bg-gradient-to-b from-[#FAFCFA] to-slate-50">
+        <ContactUsSection />
+      </div>
 
     </div>
   )
