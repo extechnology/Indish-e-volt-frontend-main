@@ -70,13 +70,13 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
             {/* Logo */}
             <Link to="/" className="flex items-center group shrink-0" aria-label="Indish-e-Volt Home">
               <img
-                src="/Updated-INDISH-LOGO.png"
+                src="/INDIS-fit-new-logo.png"
                 alt="Indish-e-Volt Logo"
                 className="object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-sm"
                 style={{
-                  height: isScrolled ? '58px' : '58px',
+                  height: isScrolled ? '54px' : '56px',
                   width: 'auto',
-                  maxWidth: isScrolled ? '160px' : '180px',
+                  maxWidth: isScrolled ? '180px' : '200px',
                   filter: isScrolled ? 'none' : 'brightness(0) invert(1)',
                   transition: 'height 0.4s ease, filter 0.4s ease, max-width 0.4s ease',
                 }}
@@ -178,7 +178,7 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
             {/* Drawer Top */}
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <img src="/Updated-INDISH-LOGO.png" alt="Indish-e-Volt Logo" className="h-14 w-auto object-contain brightness-0 invert" />
+                <img src="/INDIS-fit-new-logo.png" alt="Indish-e-Volt Logo" className="h-20 w-auto object-contain brightness-0 invert" />
               </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
