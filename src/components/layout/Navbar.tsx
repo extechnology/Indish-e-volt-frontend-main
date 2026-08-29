@@ -70,11 +70,11 @@ export default function Navbar({ onOpenPartnerModal }: NavbarProps) {
             {/* Logo */}
             <Link to="/" className="flex items-center group shrink-0" aria-label="Indish-e-Volt Home">
               <img
-                src="/INDIS-fit-new-logo.png"
+                src="/INDISH LOGO UPDATE 29-08-2026-04.png"
                 alt="Indish-e-Volt Logo"
                 className="object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-sm"
                 style={{
-                  height: isScrolled ? '54px' : '56px',
+                  height: isScrolled ? '56px' : '56px',
                   width: 'auto',
                   maxWidth: isScrolled ? '180px' : '200px',
                   filter: isScrolled ? 'none' : 'brightness(0) invert(1)',
