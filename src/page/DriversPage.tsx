@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import PageHero from '../components/sections/PageHero'
+import EVChargingReferenceGuide from '../components/sections/EVChargingReferenceGuide'
 
 /* ── Vehicle types for Range Calculator ── */
 const vehicleTypes = [
@@ -284,7 +285,10 @@ export default function DriversPage() {
         </div>
       </section>
 
-      {/* ─── SECTION 3: Charging Speed Comparison ─── */}
+      {/* ─── SECTION 3: EV Charging Quick Reference Guide ─── */}
+      <EVChargingReferenceGuide />
+
+      {/* ─── SECTION 4: Charging Speed Comparison ─── */}
       <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-14 relative z-10">
           <div className="text-center max-w-3xl mx-auto space-y-4">
