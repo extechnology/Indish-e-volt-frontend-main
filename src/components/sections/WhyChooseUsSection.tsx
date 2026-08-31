@@ -223,7 +223,7 @@ export default function WhyChooseUsSection() {
             className="relative order-1 lg:order-2 rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
           >
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
+              src="/why-us-1.jpeg"
               alt="Ultra-fast EV charging station with electric vehicle"
               className="w-full h-full object-cover"
             />
@@ -256,7 +256,7 @@ export default function WhyChooseUsSection() {
             className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
           >
             <img
-              src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80"
+              src="/why-us-2.jpeg"
               alt="Hand plugging EV charging connector"
               className="w-full h-full object-cover"
             />

@@ -110,7 +110,7 @@ export default function PartnersPage() {
         title="INDIA'S EV CHARGING"
         titleHighlight="OPPORTUNITY."
         description="India's EV charging market is in a structural growth phase, driven by rapid EV adoption, strong government policy support, and rising private-sector participation."
-        image="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image="/banner-all.jpeg"
         imageAlt="Indish eVolt Partnership"
       />
 

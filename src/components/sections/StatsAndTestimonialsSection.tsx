@@ -9,7 +9,7 @@ const stats = [
     label: 'Active Chargers',
     desc: 'Across 40+ metro cities',
     icon: Zap,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=85',
+    image: '/speak-1.jpeg',
   },
   {
     value: 160,
@@ -17,7 +17,7 @@ const stats = [
     label: 'Max Charging Speed',
     desc: '80% charge in 15 mins',
     icon: BatteryCharging,
-    image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=85',
+    image: '/speak-2.jpeg',
   },
   {
     value: 250,
@@ -25,7 +25,7 @@ const stats = [
     label: 'EV Drivers Served',
     desc: 'And growing rapidly daily',
     icon: Users,
-    image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=85',
+    image: '/speak-3.jpeg',
   },
   {
     value: 40,
@@ -33,7 +33,7 @@ const stats = [
     label: 'Metro Hubs Covered',
     desc: 'Expanding corridors monthly',
     icon: MapPin,
-    image: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=85',
+    image: '/speak-4.jpeg',
   },
 ]
 
@@ -126,8 +126,8 @@ function StatCard({ stat, idx }: { stat: typeof stats[0]; idx: number }) {
       />
 
       {/* Sleek Dark & Green Gradient Overlay to ensure maximum legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/30" />
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/90" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/5 via-transparent to-slate-950/5" />
 
       {/* Top Header Row */}
       <div className="relative z-10 flex items-center justify-between">

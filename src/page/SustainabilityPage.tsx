@@ -59,7 +59,7 @@ export default function SustainabilityPage() {
         title="ZERO EMISSION DRIVING"
         titleHighlight="CLEAN GREEN FUTURE."
         description="Our chargers run on 100% certified renewable energy from solar canopies and wind farms with BESS grid stability."
-        image="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1400&q=80"
+        image="/banner-all.jpeg"
         imageAlt="Solar Canopy EV Charging Infrastructure"
       />
 
@@ -163,7 +163,7 @@ export default function SustainabilityPage() {
 
           <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[4/3]">
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
+              src="/storage.jpeg"
               alt="BESS Battery Storage Station"
               className="w-full h-full object-cover"
             />
