@@ -67,7 +67,7 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 lg:col-span-2 h-[340px] sm:h-[400px] flex flex-col justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=85"
+              src="/top-1.jpeg"
               alt="160kW Ultra-Fast Chargers"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -103,7 +103,7 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 h-[340px] sm:h-[400px] flex flex-col justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+              src="/top-2.jpeg"
               alt="Plug & Charge Technology"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -187,7 +187,7 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 lg:col-span-2 h-[260px] sm:h-[300px] flex flex-col justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://ekoenergetyka.com/wp-content/uploads/2024/11/c46ebcb54e12c38e69ecab6aa5eb0986335215209f546097ffd7c25681aa9338.png"
+              src="/bottom-2.jpeg"
               alt="Highway Charging Hubs"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -221,7 +221,7 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 lg:col-span-2 h-[260px] sm:h-[300px] flex items-center justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=85"
+              src="/bottom-1.jpeg"
               alt="Smart Navigation"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70"
             />

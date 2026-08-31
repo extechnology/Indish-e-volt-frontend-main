@@ -152,7 +152,7 @@ export default function DriversPage() {
         title="ULTRA-FAST CHARGING"
         titleHighlight="FOR EVERY JOURNEY."
         description="160kW liquid-cooled charging, auto plug-and-charge, and 24/7 driver lounges — powered by 100% clean energy."
-        image="https://images.unsplash.com/photo-1571079570759-8b8dae4c4a78?auto=format&fit=crop&w=1400&q=80"
+        image="/banner-all.jpeg"
         imageAlt="Electric Vehicle Driver Charging Station"
       />
 

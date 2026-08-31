@@ -85,11 +85,11 @@ const ourSolution = [
 ]
 
 const timelineSteps = [
-  { year: '1997', title: 'Group Founder', desc: 'Indish World Group established, building trusted businesses across multiple sectors.', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80' },
-  { year: '2026', title: 'Indish eVolt Launch', desc: 'Launch of our dedicated green-energy subsidiary to tackle India’s EV charging gap.', image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80' },
-  { year: '2027–2028', title: 'Expansion', desc: 'Phase 1 rollout and nationwide expansion across strategic highways and metros.', image: 'https://plus.unsplash.com/premium_photo-1679917152396-4b18accacb9d?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-  { year: '2029', title: 'Scale', desc: 'Scaling the network with advanced battery tech and renewable energy integration.', image: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80' },
-  { year: '2030', title: 'IPO Horizon', desc: 'Targeting an Initial Public Offering, becoming a leading public green energy enterprise.', image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80' },
+  { year: '1997', title: 'Group Founder', desc: 'Indish World Group established, building trusted businesses across multiple sectors.', image: '/path-1.jpeg' },
+  { year: '2026', title: 'Indish eVolt Launch', desc: 'Launch of our dedicated green-energy subsidiary to tackle India’s EV charging gap.', image: '/path-2.jpeg' },
+  { year: '2027–2028', title: 'Expansion', desc: 'Phase 1 rollout and nationwide expansion across strategic highways and metros.', image: '/path-3.jpeg' },
+  { year: '2029', title: 'Scale', desc: 'Scaling the network with advanced battery tech and renewable energy integration.', image: '/path-4.jpeg' },
+  { year: '2030', title: 'IPO Horizon', desc: 'Targeting an Initial Public Offering, becoming a leading public green energy enterprise.', image: '/path-5.jpeg' },
 ]
 
 export default function AboutPage() {
@@ -115,7 +115,7 @@ export default function AboutPage() {
         title="ACCELERATING INDIA'S"
         titleHighlight="ELECTRIC FUTURE."
         description="Indish eVolt is an integrated green energy and electric mobility company, established under the IndishWorld Group. We design, install, operate, and maintain EV charging infrastructure across India, building a complete ecosystem for sustainable transportation."
-        image="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1600&q=80"
+        image="/banner-all.jpeg"
         imageAlt="Indish eVolt EV Charging Infrastructure"
       />
 
@@ -369,7 +369,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── SECTION 6: Timeline Journey ─── */}
-      <section className="py-20 sm:py-28 px-5 sm:px-8 max-w-7xl mx-auto space-y-16">
+      <section className="py-20 sm:py-16 px-5 sm:px-2 max-w-7xl mx-auto space-y-16">
         <div ref={timelineRef} className="text-center max-w-3xl mx-auto space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -400,7 +400,7 @@ export default function AboutPage() {
         </div>
 
         {/* Timeline Horizontal Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-3 relative">
           {timelineSteps.map((step, idx) => (
             <motion.div
               key={step.year}
