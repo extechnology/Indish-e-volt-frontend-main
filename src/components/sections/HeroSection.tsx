@@ -28,10 +28,10 @@ export default function HeroSection() {
         muted
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
-        poster="/hero-vedio.mp4"
+        poster="/Indish_ad.mp4"
       >
         <source
-          src="/hero-vedio.mp4"
+          src="/Indish_ad.mp4"
           type="video/mp4"
         />
       </video>
