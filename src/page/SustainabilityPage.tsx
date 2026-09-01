@@ -59,7 +59,7 @@ export default function SustainabilityPage() {
         title="ZERO EMISSION DRIVING"
         titleHighlight="CLEAN GREEN FUTURE."
         description="Our chargers run on 100% certified renewable energy from solar canopies and wind farms with BESS grid stability."
-        image="/banner-all.jpeg"
+        image="/sus-banner.jpeg"
         imageAlt="Solar Canopy EV Charging Infrastructure"
       />
 
