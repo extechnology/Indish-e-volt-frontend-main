@@ -23,7 +23,7 @@ export default function Index() {
       <StationArchitectureSection />
 
       {/* Section 5: Stats & Testimonials – animated counters + dark testimonial cards */}
-      <StatsAndTestimonialsSection />
+      {/* <StatsAndTestimonialsSection /> */}
 
       {/* Section 5: Network Showcase – image grid gallery */}
       <NetworkShowcaseSection />

@@ -1,7 +1,8 @@
-﻿import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import SmoothScroll from '../common/SmoothScroll'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import FloatingWhatsApp from '../common/FloatingWhatsApp'
 
 export default function RootLayout() {
   return (
@@ -15,9 +16,13 @@ export default function RootLayout() {
           <Outlet />
         </main>
 
+        {/* Floating WhatsApp and Social Media Handle */}
+        <FloatingWhatsApp />
+
         {/* Animated Modern Footer */}
         <Footer />
       </div>
     </SmoothScroll>
   )
 }
+

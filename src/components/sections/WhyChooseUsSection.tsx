@@ -32,11 +32,7 @@ const rightFeatures = [
     title: 'Strategic, Accessible Locations',
     desc: 'We place our stations where you need them most. Find Indish-e-Volt chargers strategically located at key commercial hubs and major travel routes for optimal convenience and minimal detours.',
   },
-  {
-    icon: MapPin,
-    title: 'Strategic, Accessible Locations',
-    desc: 'We place our stations where you need them most. Find Indish-e-Volt chargers strategically located at key commercial hubs and major travel routes for optimal convenience and minimal detours.',
-  },
+
 ]
 
 // Animated electric SVG background
