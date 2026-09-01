@@ -115,7 +115,7 @@ export default function AboutPage() {
         title="ACCELERATING INDIA'S"
         titleHighlight="ELECTRIC FUTURE."
         description="Indish eVolt is an integrated green energy and electric mobility company, established under the IndishWorld Group. We design, install, operate, and maintain EV charging infrastructure across India, building a complete ecosystem for sustainable transportation."
-        image="/banner-all.jpeg"
+        image="/about-banner.jpeg"
         imageAlt="Indish eVolt EV Charging Infrastructure"
       />
 
