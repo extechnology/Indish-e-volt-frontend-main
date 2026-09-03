@@ -1,4 +1,5 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Mail, Zap, Lock, ArrowRight, CheckCircle2, Eye, EyeOff, User as UserIcon } from 'lucide-react'
 
@@ -238,8 +239,11 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
                   </button>
 
                   <p className="text-center text-[11px] text-slate-400">
-                    By {mode === 'login' ? 'signing in' : 'creating an account'}, you agree to our Terms of
-                    Service & Green Energy Policy.
+                    By {mode === 'login' ? 'signing in' : 'creating an account'}, you agree to our{' '}
+                    <Link to="/terms" onClick={onClose} className="underline text-slate-600 hover:text-[#00D66C] transition-colors">
+                      Terms and Conditions
+                    </Link>{' '}
+                    & Green Energy Policy.
                   </p>
                 </form>
               </>

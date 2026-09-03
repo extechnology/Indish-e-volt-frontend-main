@@ -204,9 +204,9 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
           <p>© {new Date().getFullYear()} Indish-e-Volt. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
-            <a href="#terms" className="hover:text-slate-300 transition-colors">Terms of Service</a>
-            <a href="#cookies" className="hover:text-slate-300 transition-colors">Cookie Preferences</a>
+            <Link to="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-slate-300 transition-colors">Terms and Conditions</Link>
+            <Link to="/cookies" className="hover:text-slate-300 transition-colors">Cookies Policy</Link>
           </div>
           <p className="flex items-center gap-1">
             Powered By <a href="https://extechnology.in/" target='_blank' rel="noopener noreferrer" className="text-[#00D66C] hover:underline font-semibold">Extechnology.in</a>

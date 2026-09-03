@@ -11,6 +11,9 @@ const SustainabilityPage = lazy(() => import('./page/SustainabilityPage'))
 const AboutPage = lazy(() => import('./page/AboutPage'))
 const MapPage = lazy(() => import('./page/MapPage'))
 const BecomePartnerPage = lazy(() => import('./page/BecomePartnerPage'))
+const TermsConditionsPage = lazy(() => import('./page/TermsConditionsPage'))
+const PrivacyPolicyPage = lazy(() => import('./page/PrivacyPolicyPage'))
+const CookiesPolicyPage = lazy(() => import('./page/CookiesPolicyPage'))
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,6 +38,13 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/map" element={<MapPage />} />
             <Route path="/become-partner" element={<BecomePartnerPage />} />
+            <Route path="/terms" element={<TermsConditionsPage />} />
+            <Route path="/terms-and-conditions" element={<TermsConditionsPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/cookies" element={<CookiesPolicyPage />} />
+            <Route path="/cookies-policy" element={<CookiesPolicyPage />} />
+            <Route path="/cookie-preferences" element={<CookiesPolicyPage />} />
           </Route>
         </Routes>
       </Suspense>
