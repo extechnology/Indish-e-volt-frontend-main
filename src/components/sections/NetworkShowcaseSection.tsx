@@ -59,7 +59,7 @@ export default function NetworkShowcaseSection() {
         {/* ── Image Gallery Grid (Exact Layout of Image 4) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           
-          {/* Card 1: 350kW Ultra-Fast Chargers (Spans 2 cols on LG) */}
+          {/* Card 1: 160kW Ultra-Fast Chargers (Spans 2 cols on LG) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,8 +67,8 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 lg:col-span-2 h-[340px] sm:h-[400px] flex flex-col justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=85"
-              alt="350kW Ultra-Fast Chargers"
+              src="/top-1.jpeg"
+              alt="160kW Ultra-Fast Chargers"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
@@ -83,7 +83,7 @@ export default function NetworkShowcaseSection() {
             {/* Bottom Content */}
             <div className="relative z-10 space-y-2">
               <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight">
-                350kW Ultra-Fast Chargers
+                160kW Ultra-Fast Chargers
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 font-medium">
                 Fastest commercially available speed in India
@@ -103,7 +103,7 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 h-[340px] sm:h-[400px] flex flex-col justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+              src="/top-2.jpeg"
               alt="Plug & Charge Technology"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -187,7 +187,7 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 lg:col-span-2 h-[260px] sm:h-[300px] flex flex-col justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://ekoenergetyka.com/wp-content/uploads/2024/11/c46ebcb54e12c38e69ecab6aa5eb0986335215209f546097ffd7c25681aa9338.png"
+              src="/bottom-2.jpeg"
               alt="Highway Charging Hubs"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -221,7 +221,7 @@ export default function NetworkShowcaseSection() {
             className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 lg:col-span-2 h-[260px] sm:h-[300px] flex items-center justify-between p-6 cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=85"
+              src="/bottom-1.jpeg"
               alt="Smart Navigation"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70"
             />

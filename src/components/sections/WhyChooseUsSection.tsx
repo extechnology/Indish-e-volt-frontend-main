@@ -12,7 +12,7 @@ const leftFeatures = [
   {
     icon: Zap,
     title: 'Pioneering Fast-Charge Speed',
-    desc: 'Our liquid-cooled 350kW CCS2 dispensers pump up to 400 miles of range per hour — the fastest commercially available charging technology on Indian roads today.',
+    desc: 'Our liquid-cooled 160kW CCS2 dispensers pump up to 400 miles of range per hour — the fastest commercially available charging technology on Indian roads today.',
   },
   {
     icon: BatteryCharging,
@@ -32,11 +32,7 @@ const rightFeatures = [
     title: 'Strategic, Accessible Locations',
     desc: 'We place our stations where you need them most. Find Indish-e-Volt chargers strategically located at key commercial hubs and major travel routes for optimal convenience and minimal detours.',
   },
-  {
-    icon: MapPin,
-    title: 'Strategic, Accessible Locations',
-    desc: 'We place our stations where you need them most. Find Indish-e-Volt chargers strategically located at key commercial hubs and major travel routes for optimal convenience and minimal detours.',
-  },
+
 ]
 
 // Animated electric SVG background
@@ -223,7 +219,7 @@ export default function WhyChooseUsSection() {
             className="relative order-1 lg:order-2 rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
           >
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
+              src="/why-us-1.jpeg"
               alt="Ultra-fast EV charging station with electric vehicle"
               className="w-full h-full object-cover"
             />
@@ -236,7 +232,7 @@ export default function WhyChooseUsSection() {
                 transition={{ delay: 0.6 }}
                 className="inline-flex flex-col gap-0.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-xl px-4 py-2.5"
               >
-                <span className="text-xs font-bold text-[#00D66C]">⚡ 350kW Ultra-Fast</span>
+                <span className="text-xs font-bold text-[#00D66C]">⚡ 160kW Ultra-Fast</span>
                 <span className="text-[11px] text-slate-300">80% in 15 mins · 99.9% Uptime</span>
               </motion.div>
             </div>
@@ -256,7 +252,7 @@ export default function WhyChooseUsSection() {
             className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
           >
             <img
-              src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80"
+              src="/why-us-2.jpeg"
               alt="Hand plugging EV charging connector"
               className="w-full h-full object-cover"
             />

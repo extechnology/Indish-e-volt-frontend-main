@@ -367,7 +367,7 @@ export default function EVMapContainer({
                             {s.connectors[0]?.type || 'CCS2'}
                           </span>
                           <span className="text-slate-300 font-extrabold">
-                            {s.connectors[0]?.power || 350} kW
+                            {s.connectors[0]?.power || 160} kW
                           </span>
                         </div>
                       </div>
