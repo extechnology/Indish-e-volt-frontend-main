@@ -17,7 +17,7 @@ import {
 
 // Primary WhatsApp Numbers
 const PRIMARY_WHATSAPP_NUMBER = '919995555044'
-const BACKUP_WHATSAPP_NUMBER = '917907116895'
+const BACKUP_WHATSAPP_NUMBER = '919745654022'
 
 // Preset quick-chat inquiry topics
 const QUICK_TOPICS = [

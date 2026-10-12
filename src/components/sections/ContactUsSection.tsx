@@ -164,8 +164,8 @@ export default function ContactUsSection() {
               <div className="space-y-1">
                 <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">India Lines:</div>
                 <div className="flex flex-wrap gap-x-3 gap-y-1">
-                  <a href="tel:+917907116895" className="hover:text-[#00D66C] transition-colors font-medium">
-                    +91 79 07 11 68 95
+                  <a href="tel:+919745654022" className="hover:text-[#00D66C] transition-colors font-medium">
+                    +91 97456 54022
                   </a>
                   <span className="text-slate-600">|</span>
                   <a href="tel:+919995555044" className="hover:text-[#00D66C] transition-colors font-medium">

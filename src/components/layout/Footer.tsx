@@ -168,8 +168,8 @@ export default function Footer() {
               <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 space-y-2">
                 <div className="text-slate-400 font-semibold uppercase text-[10px] tracking-wider">Phone Support</div>
                 <div className="flex flex-col space-y-1 font-medium">
-                  <a href="tel:+917907116895" className="text-slate-200 hover:text-[#00D66C] transition-colors flex items-center gap-1.5">
-                    <span>🇮🇳 +91 79 07 11 68 95</span>
+                  <a href="tel:+919745654022" className="text-slate-200 hover:text-[#00D66C] transition-colors flex items-center gap-1.5">
+                    <span>🇮🇳 +91 97456 54022</span>
                   </a>
                   <a href="tel:+919995555044" className="text-slate-200 hover:text-[#00D66C] transition-colors flex items-center gap-1.5">
                     <span>🇮🇳 +91 999 555 5044</span>
